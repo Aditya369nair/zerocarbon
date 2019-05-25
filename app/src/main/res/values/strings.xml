@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">ZeroCarbon</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_driver_activity">Driver_activity</string>
+    <string name="seat_prompt">Enter number of seats</string>
+    <string-array name="campus_arrays">
+        <item>Guldheden Campus</item>
+        <item>MYP Campus</item>
+    </string-array>
+    <string-array name="seat_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string name="title_activity_driver_status">DriverStatusActivity</string>
+    <string name="title_activity_rider">RiderActivity</string>
+    <string name="title_activity_ride_list">RideListActivity</string>
 </resources>

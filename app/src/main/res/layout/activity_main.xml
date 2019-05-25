@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +7,8 @@
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
@@ -21,14 +20,81 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main"/>
+    <include layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="250dp"
+            android:text="How are you commuting (driver/rider)?"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- add RadioGroup which contain the many RadioButton-->
+        <RadioGroup
+            android:id="@+id/usertyperadio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="300dp">
+
+            <!-- In RadioGroup create the 1 Radio Button-->
+            <!-- like this we will add some more Radio Button-->
+            <RadioButton
+                android:id="@+id/driver_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Driver"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/rider_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Rider"
+                android:textSize="20dp" />
+
+
+        </RadioGroup>
+
+        <!-- add button For Submit the Selected item-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submit"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="180dp"
+            />
+
+        <!-- add clear button for clear the selected item-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/clear"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="20dp"
+            />
+
+    </RelativeLayout>
+
+
 
 </android.support.design.widget.CoordinatorLayout>
