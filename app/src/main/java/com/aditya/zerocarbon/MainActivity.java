@@ -1,8 +1,6 @@
 package com.aditya.zerocarbon;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -11,6 +9,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,13 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        Button btnSubmit = (Button) findViewById(R.id.submit);
+        Button btnSubmit = findViewById(R.id.submit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RadioGroup usertype = (RadioGroup)findViewById(R.id.usertyperadio);
+                RadioGroup usertype = findViewById(R.id.usertyperadio);
                 int selectedId = usertype.getCheckedRadioButtonId();
-                RadioButton radioUserButton = (RadioButton) findViewById(selectedId);
                 if (selectedId == R.id.driver_radio) {
                     setContentView(R.layout.activity_driver_activity);
                 } else if (selectedId == R.id.rider_radio) {
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnClear = (Button) findViewById(R.id.clear);
+        Button btnClear = findViewById(R.id.clear);
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

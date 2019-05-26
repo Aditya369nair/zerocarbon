@@ -68,7 +68,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/toaddress"
+            android:id="@+id/toAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100sp"
@@ -87,7 +87,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/seatCount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100sp"
@@ -99,8 +99,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            android:id="@+id/submit"
+            android:text="Add "
+            android:id="@+id/driverSubmit"
             android:textStyle="bold"
             android:textSize="20sp"
             android:layout_marginTop="500sp"
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Clear"
-            android:id="@+id/clear"
+            android:id="@+id/driverClear"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="500sp"

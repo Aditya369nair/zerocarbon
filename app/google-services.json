@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "772819113899",
+    "firebase_url": "https://zerocarbon-7e071.firebaseio.com",
+    "project_id": "zerocarbon-7e071",
+    "storage_bucket": "zerocarbon-7e071.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772819113899:android:f1af23fdabf11c48",
+        "android_client_info": {
+          "package_name": "com.aditya.zerocarbon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772819113899-akr466kljsgv7cm6ddch3alk7rkd5a2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyAlKoqeoZsXH_e6nguwgC0uKCWeO9de8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772819113899-akr466kljsgv7cm6ddch3alk7rkd5a2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
