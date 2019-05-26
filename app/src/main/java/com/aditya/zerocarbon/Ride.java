@@ -1,18 +1,24 @@
 package com.aditya.zerocarbon;
 
 public class Ride {
+    private String id;
     private String from;
     private String to;
-    private String seats;
+    private int seats;
 
     public Ride() {
 
     }
 
-    public Ride(String f , String t, String s) {
+    public Ride(String id, String f , String t, int s) {
+        this.id = id;
         this.from =f;
         this.to =t;
         this.seats = s;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
     }
 
     public String getFrom() {
@@ -23,8 +29,12 @@ public class Ride {
         return to;
     }
 
-    public String getSeats() {
+    public int getSeats() {
         return seats;
+    }
+
+    public String getId() {
+        return id;
     }
 
     @Override

@@ -18,4 +18,5 @@
     <string name="title_activity_driver_status">DriverStatusActivity</string>
     <string name="title_activity_rider">RiderActivity</string>
     <string name="title_activity_ride_list">RideListActivity</string>
+    <string name="title_activity_book_ride">BookRide</string>
 </resources>
