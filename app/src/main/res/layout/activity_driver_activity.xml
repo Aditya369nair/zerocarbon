@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
             android:layout_marginTop="250sp"
-            android:text="Give your ride details: "
+            android:text="Please enter your ride details: "
             android:textSize="25dp"
             android:textStyle="bold" />
 
