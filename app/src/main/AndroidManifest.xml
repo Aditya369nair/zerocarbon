@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".BookRide"
+            android:label="@string/title_activity_book_ride"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".RideListActivity"
             android:label="@string/title_activity_ride_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RiderActivity"
             android:label="@string/title_activity_rider"

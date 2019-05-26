@@ -7,12 +7,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -106,18 +108,58 @@ public class MainActivity extends AppCompatActivity {
                     setContentView(R.layout.activity_ride_list);
                     final ListView rideListView = findViewById(R.id.ride_list);
 
+                    rideListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            final Ride rr = (Ride)rideListView.getItemAtPosition(position);
+                            setContentView(R.layout.activity_book_ride);
+                            TextView bookRideFrom = findViewById(R.id.bookRideFrom);
+                            TextView bookRideTo = findViewById(R.id.bookRideTo);
+                            bookRideFrom.setText(rr.getFrom());
+                            bookRideTo.setText(rr.getTo());
+                            final Button btnBookSubmit = findViewById(R.id.bookSubmit);
+                            btnBookSubmit.setOnClickListener(new View.OnClickListener(){
+                                @Override
+                                public void onClick(View v) {
+                                    Spinner seatSpinner = findViewById(R.id.bookSeatCount);
+                                    String seatString = seatSpinner.getSelectedItem().toString();
+                                    int requestedSeatValue = Integer.parseInt(seatString);
+                                    if (requestedSeatValue > rr.getSeats()) {
+                                        Toast.makeText(rideListView.getContext(), "Requested seats more than available seats",Toast.LENGTH_SHORT).show();
+
+                                    } else {
+                                        int remainingSeats = rr.getSeats() - requestedSeatValue;
+                                        rr.setSeats(remainingSeats);
+                                        rides.document(rr.getId()).update("seats",rr.getSeats()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                Toast.makeText(rideListView.getContext(), "Succesfully booked commute",Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                                    }
+
+
+                                }
+                            });
+                            final Button btnBookClear = findViewById(R.id.bookClear);
+                            Toast.makeText(rideListView.getContext(), "Selected ride"+rr.getId(),Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                     rides.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
                             if (task.isSuccessful()) {
-                                List<String> myRideList = new ArrayList<>();
+                                List<Ride> myRideList = new ArrayList<>();
                                 for(QueryDocumentSnapshot document : task.getResult()) {
-                                    String s = document.get("seats").toString();
+                                    int s = Integer.parseInt(document.get("seats").toString());
                                     String f = document.get("from").toString();
                                     String t = document.get("to").toString();
+                                    String id = document.getId();
+                                    Ride rr = new Ride(id,f,t,s);
 
-                                    myRideList.add("Ride from '"+f+"' to '"+t+"' with "+s+" seats");
+                                    myRideList.add(rr);
                                 }
 
                                 ArrayAdapter arrayAdapter = new ArrayAdapter(rideListView.getContext(),android.R.layout.simple_list_item_1,myRideList);
