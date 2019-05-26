@@ -22,13 +22,19 @@
 
     <include layout="@layout/content_main" />
     <include layout="@layout/content_ride_list" />
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="1"
         tools:context=".MainActivity">
 
+        <ListView
+            android:id="@+id/ride_list"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="250sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    </TableLayout>
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
