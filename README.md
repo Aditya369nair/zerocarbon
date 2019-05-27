@@ -1,4 +1,4 @@
-# zerocarbon
+# ZeroCarbon
 Carpooling App by students of ISGR, Gothenburg.
 
 This is an attempt to create a simple carpooling app, as part of my PYP Exhibition project.
