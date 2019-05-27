@@ -28,4 +28,4 @@ This information is stored in Firestore and is available for anybody looking for
 
 ## Demo
 Here is a demo video of the app
-[![Watch the Demo](https://imgur.com/ay9feo1)](https://player.vimeo.com/video/338737061)
+[![Watch the Demo](https://github.com/Aditya369nair/zerocarbon/blob/master/imgs/demo_thumbnail.png)(https://player.vimeo.com/video/338737061)
