@@ -28,3 +28,4 @@ This information is stored in Firestore and is available for anybody looking for
 
 ## Demo
 Here is a demo video of the app
+<iframe src="https://player.vimeo.com/video/338737061" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
