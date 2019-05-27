@@ -29,6 +29,6 @@ This information is stored in Firestore and is available for anybody looking for
 ## Demo
 Here is a demo video of the app
 
-[[https://raw.githubusercontent.com/Aditya369nair/zerocarbon/master/imgs/demo_thumbnail.png|alt=demoimg]]
+[!Watch](https://raw.githubusercontent.com/Aditya369nair/zerocarbon/master/imgs/demo_thumbnail.png|alt=demoimg)
 
 https://player.vimeo.com/video/338737061
